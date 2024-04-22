@@ -1,0 +1,26 @@
+﻿<Window x:Class="work_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:work_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name = "Connect_btn"  Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="99" Height="50" Click="Connect_btn_Click"/>
+        <Button Name = "Add_btn"  Content="Add new data" HorizontalAlignment="Left" Margin="127,12,0,0" VerticalAlignment="Top" Width="99" Height="50" Click="Add_btn_Click"/>
+        <Button Name = "Delete_btn"  Content="Delete data" HorizontalAlignment="Left" Margin="248,12,0,0" VerticalAlignment="Top" Width="99" Height="50" Click="Delete_btn_Click"/>
+        <Button Name = "Update_btn"  Content="Update" HorizontalAlignment="Left" Margin="376,12,0,0" VerticalAlignment="Top" Width="99" Height="50" Click="Update_btn_Click"/>
+        <DataGrid AutoGenerateColumns="False" Name = "MainDG"   Margin="0,87,0,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Airplane id" Binding="{Binding airplane_id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Airplane name" Binding="{Binding airplane_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="date of issue" Binding="{Binding date_of_issue}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Capacity" Binding="{Binding capacity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last tech service" Binding="{Binding last_tech_service}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Flight hours" Binding="{Binding flight_hours}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
